@@ -23,4 +23,4 @@ Input outside of the length parameters will be met with an error notification to
 
 ---
 
-![Password Generator Screenshot] (  "Screenshot")
+![Password Generator Screenshot] ( Develop/Screenshot.png?raw=true "Screenshot")
