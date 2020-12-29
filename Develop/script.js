@@ -34,12 +34,12 @@ function generatePassword() {
   }
 
 
-
-var collectionOfValids = [];
-var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
-var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz" .split("");
-var numberChar = "0123456789" .split("");
-var specialChar = "*&^%$#@!?><{}" .split("");
+// Password requirement variables
+  var collectionOfValids = [];
+  var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+  var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz" .split("");
+  var numberChar = "0123456789" .split("");
+  var specialChar = "*&^%$#@!?><{}" .split("");
 
 
 // Now we verify if a lowercase character is desired
