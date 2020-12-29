@@ -15,11 +15,11 @@ Input outside of the length parameters will be met with an error notification to
 
 ### GitHub Repo
 
->
+> https://github.com/Govepitr/password-gen
 
 ### GitHub Live Site
 
->
+> https://govepitr.github.io/password-gen/
 
 ---
 
