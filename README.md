@@ -23,4 +23,5 @@ Input outside of the length parameters will be met with an error notification to
 
 ---
 
-![Password Generator Screenshot](/Govepitr/password-gen/blob/main/Screenshot.png?raw=true "Screenshot")
+![Password Generator Screenshot](main/Screenshot.png?raw=true "Screenshot")
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
