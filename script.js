@@ -9,7 +9,12 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+// Password requirement variables
+var collectionOfValids = [];
+var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz" .split("");
+var numberChar = "0123456789" .split("");
+var specialChar = "*&^%$#@!?><{}" .split("");
 // Password gen function
 
 function generatePassword() {
@@ -22,24 +27,17 @@ function generatePassword() {
 //A length that starts at 8 but does not exceed 128 characters
   if (isNaN(passLength)) {
     alert ("Please enter a number between 8 and 128. Please try again.");
-    return;
+    return generatePassword();
   }
   if (passLength < 8) {
-    alert("Error, that selection does not meet the minimum character requirement. Please try again.");
-    return;
+    alert("That selection must be greater than 8. Please try again.");
+    return generatePassword();
   }
    if (passLength > 128) {
-    alert("Error, that selection exceeds the character requirement. Please try again.");
-    return;
+    alert("That selection must be less than 128. Please try again.");
+    return generatePassword();
   }
 
-
-// Password requirement variables
-  var collectionOfValids = [];
-  var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
-  var lowerCaseChar = "abcdefghijklmnopqrstuvwxyz" .split("");
-  var numberChar = "0123456789" .split("");
-  var specialChar = "*&^%$#@!?><{}" .split("");
 
 
 // Now we verify if a lowercase character is desired
@@ -50,7 +48,7 @@ function generatePassword() {
     }
   }
 // Uppercase confirmation
-  var upperCaseConfirm = confirm("Would you like to add any uppsercase letters?");
+  var upperCaseConfirm = confirm("Would you like to add any uppercase letters?");
   if(upperCaseConfirm === true){
     for ( var i = 0; i < upperCaseChar.length; i++) {
       collectionOfValids.push(upperCaseChar[i]);
@@ -58,7 +56,7 @@ function generatePassword() {
   }
 
 // Numerical values confirmation
-    var numberConfirm = confirm("Will we be including any numbers in your password?");
+    var numberConfirm = confirm("Would you like to add any numbers to your password?");
     if(numberConfirm === true) {
       for (var i = 0; i < numberChar.length; i++) {
         collectionOfValids.push(numberChar[i]);
@@ -66,7 +64,7 @@ function generatePassword() {
     }
 
 //  Lastly we confirm if any special characters are to be added
-    var specialConfirm = confirm("Now are any special characters going to be included as well?");
+    var specialConfirm = confirm("Would you like to add special characters to your password as well?");
     if (specialConfirm === true) {
       for (var i = 0; i < specialChar.length; i++) {
         collectionOfValids.push(specialChar[i]);
